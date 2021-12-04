@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhiSick.js φ demo</title>
+    <meta name="description" content="A very simple 2D physics engine written in JS">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="cnvs"></canvas>
+    <div id="controls">
+        <button onclick="handleCommand('q')">rotate ccw</button>
+        <button onclick="handleCommand('e')">rotate cw</button>
+        <button onclick="handleCommand('z')">Play/Pause</button>
+        <button onclick="handleCommand('r')">Spwan New Rect</button>
+        <button onclick="handleCommand('p')">Spwan New Polygon</button>
+        <button onclick="handleCommand('c')">Spwan New Circle</button>
+    </div>
+    <div id="LOG">
+        Log Messages Will Appear  Here.
+    </div>
+    
+    <!-- ! VECTOR MATH -->
+    <script src="Engine/Math/Vec2.js"></script>
+    
+    <!-- ! CORE ENGINE COMPONENTS  -->
+    <script src="Engine/Core/RigidShape.js"></script>
+    <script src="Engine/Core/Collision.js"></script>
+    <script src="Engine/Core/Rectangle.js"></script>
+    <script src="Engine/Core/Polygon.js"></script>
+    <script src="Engine/Core/Circle.js"></script>
+
+    <script src="Engine/Core/Engine.js"></script>
+    
+    <!-- ! LOAD EXTENSIONS  -->
+    <script src="Engine/Extensions/Graphics/DrawShapes.js"></script>
+    <script src="Engine/Extensions/RigidShape/ext_shape_pt_collision.js"></script>
+    <!-- ! EVERYTHING ELSE -->
+    <script src="main.js"></script>
+    <script src="inputHandler.js"></script>
+</body>
+</html>
